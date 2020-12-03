@@ -8,13 +8,10 @@ public class UserService {
 
         for (String record : records) {
             String[] userRecord = record.split(":");
-
             if (email.equals(userRecord[0])) {
                 return Integer.valueOf(userRecord[1]);
             }
         }
-
         throw new UserNotFoundException("User with given email doesn't exist");
-
     }
 }
